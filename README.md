@@ -19,7 +19,7 @@
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 About <a name="about-the-project"></a>
- _**OOP school library**_ built with [Ruby](https://www.ruby-lang.org/en/). In this project we have created:
+ _**OOP school library**_ built with [Ruby](https://www.ruby-lang.org/en/). In this project I have created:
 
  1. `person.rb`
  - Base class or parent class: contains the common attributes and methods of all the other classes.
