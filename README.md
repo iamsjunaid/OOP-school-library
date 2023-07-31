@@ -19,7 +19,7 @@
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 About <a name="about-the-project"></a>
- _**OOP school library**_ built with [Ruby](https://www.ruby-lang.org/en/). In this project we have created:
+ _**OOP school library**_ built with [Ruby](https://www.ruby-lang.org/en/). In this project I have created:
 
  1. `person.rb`
  - Base class or parent class: contains the common attributes and methods of all the other classes.
@@ -76,7 +76,7 @@ Clone this repository to your desired folder:
 
 ### Install
 
-Install thr project dependencies with:
+Install project dependencies with:
 
 ```
   bundle install
@@ -84,10 +84,10 @@ Install thr project dependencies with:
 
 ### Usage <a name="usage"></a>
 
-To run the project,instantiate the class files in `test.rb` and execute the following command:
+To run the project, instantiate the class files in `main.rb` and execute the following command:
 
 ```
-  ruby test.rb
+  ruby main.rb
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
