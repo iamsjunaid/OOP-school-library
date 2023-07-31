@@ -1,4 +1,3 @@
-# Student.rb
 require_relative 'Person'
 
 class Student < Person
