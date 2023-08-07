@@ -19,12 +19,13 @@ class Options
     puts '7 -  Exit'
     user_choice = gets.chomp
     return exit if user_choice == '7'
+
     @app.select_option(user_choice)
   end
 
   def exit
     puts 'Thank you for using the app, see you later!'
-  end 
+  end
 end
 
 def main
