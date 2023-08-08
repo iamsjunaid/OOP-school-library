@@ -29,19 +29,23 @@ class RentalOptions
     date = gets.chomp
     @rentals_list.push(Rental.new(date, @book_options.books_list[book_num], @people_options.people_list[person_num]))
     puts 'Rental created successfully'
-
   end
 
   def list_all_rentals
-    puts 'Select a person from the following list by id '
-    @people_options.people_list.each_with_index do |person, index|
-      puts "#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
-    end
-    id = gets.chomp.to_i
+    if rentals_list.empty?
+      puts 'No record found! Add a rental...'
+    else
+      puts "Available rentals in the library: #{rentals_list.count}"
+      puts 'Select a person from the following list by id '
+      @people_options.people_list.each_with_index do |person, index|
+        puts "#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+      end
+      id = gets.chomp.to_i
 
-    puts 'Rentals:'
-    @rentals_list.each do |rental|
-      puts "Date: #{rental.date}, Book \"#{rental.book.title}\" by #{rental.book.author}" if rental.person.id == id
-    end 
+      puts 'Rentals:'
+      @rentals_list.each do |rental|
+        puts "Date: #{rental.date}, Book \"#{rental.book.title}\" by #{rental.book.author}" if rental.person.id == id
+      end
+    end
   end
 end
