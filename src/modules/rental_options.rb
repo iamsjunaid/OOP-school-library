@@ -1,4 +1,7 @@
+require 'json'
 require_relative '../associations/rental'
+require_relative 'book_options'
+require_relative 'people_options'
 
 class RentalOptions
   attr_accessor :rentals_list
@@ -29,15 +32,20 @@ class RentalOptions
   end
 
   def list_all_rentals
-    puts 'Select a person from the following list by id '
-    @people_options.people_list.each_with_index do |person, index|
-      puts "#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
-    end
-    id = gets.chomp.to_i
+    if rentals_list.empty?
+      puts 'No record found! Add a rental...'
+    else
+      puts "Available rentals in the library: #{rentals_list.count}"
+      puts 'Select a person from the following list by id '
+      @people_options.people_list.each_with_index do |person, index|
+        puts "#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+      end
+      id = gets.chomp.to_i
 
-    puts 'Rentals:'
-    @rentals_list.each do |rental|
-      puts "Date: #{rental.date}, Book \"#{rental.book.title}\" by #{rental.book.author}" if rental.person.id == id
+      puts 'Rentals:'
+      @rentals_list.each do |rental|
+        puts "Date: #{rental.date}, Book \"#{rental.book.title}\" by #{rental.book.author}" if rental.person.id == id
+      end
     end
   end
 end

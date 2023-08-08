@@ -11,7 +11,7 @@ class BookOptions
     if @books_list.empty?
       puts 'No record found! Add some books...'
     else
-      puts 'Available books in the library'
+      puts "Available books in the library: #{books_list.count}"
       @books_list.each { |book| puts "Title: #{book.title}, Author: #{book.author}" }
     end
   end

@@ -13,7 +13,7 @@ class PeopleOptions
     if @people_list.empty?
       puts 'No record found! Add a person...'
     else
-      puts 'All people in the library'
+      puts "Available people in the library: #{people_list.count}"
       @people_list.each do |person|
         puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
       end
