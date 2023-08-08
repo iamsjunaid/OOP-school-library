@@ -95,11 +95,17 @@ To run the project, instantiate the class files in `main.rb` and execute the fol
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
-👤 Junaid Syed
+👤 **Junaid Syed**
 
 - GitHub: [@iamsjunaid](https://github.com/iamsjunaid)
 - LinkedIn: [@JunaidAhmedSyed](https://www.linkedin.com/in/junaidahmedsyed/)
 
+👤 **Nahid Raihan Sardar**
+
+- GitHub: [@githubhandle](https://github.com/Nahid1911)
+- Medium: [Medium](https://medium.com/@nahid.raihan)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/nahidraihan/)
+- Twitter: [Twitter](https://twitter.com/Nahid1911)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
