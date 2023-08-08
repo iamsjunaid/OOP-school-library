@@ -1,4 +1,7 @@
+require 'json'
 require_relative '../associations/rental'
+require_relative 'book_options'
+require_relative 'people_options'
 
 class RentalOptions
   attr_accessor :rentals_list
@@ -26,6 +29,7 @@ class RentalOptions
     date = gets.chomp
     @rentals_list.push(Rental.new(date, @book_options.books_list[book_num], @people_options.people_list[person_num]))
     puts 'Rental created successfully'
+
   end
 
   def list_all_rentals
@@ -38,6 +42,6 @@ class RentalOptions
     puts 'Rentals:'
     @rentals_list.each do |rental|
       puts "Date: #{rental.date}, Book \"#{rental.book.title}\" by #{rental.book.author}" if rental.person.id == id
-    end
+    end 
   end
 end

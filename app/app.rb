@@ -8,9 +8,10 @@ class App
     @options = options
     @book_options = BookOptions.new
     @people_options = PeopleOptions.new
-    @rentals_list = RentalOptions.new(@book_options, @people_options)
+    @rentals_options = RentalOptions.new(@book_options, @people_options)
     @book_options.books_list = Storage.load_data('books')
     @people_options.people_list = Storage.load_data('Person')
+    @rentals_options.rentals_list = Storage.load_data('rentals')
   end
 
   def select_option(user_choice)
@@ -26,7 +27,8 @@ class App
       @book_options.create_book
       Storage.save_data('books', @book_options.books_list)
     when '5'
-      @rentals_list.create_rental
+      @rentals_options.create_rental
+      Storage.save_data('rentals', @rentals_options.rentals_list)
     when '6'
       @rentals_list.list_all_rentals
     else
