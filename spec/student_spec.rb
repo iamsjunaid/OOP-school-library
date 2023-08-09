@@ -17,7 +17,7 @@ describe Student do
   end
 
   context 'When using play_hooky method' do
-    it 'should return a string ¯¯(ツ)/¯' do
+    it 'should return a string ¯¯\\(ツ)/¯' do
     expect(@student.play_hooky).to eql "¯(ツ)/¯"
     end
   end
