@@ -1,0 +1,6 @@
+require_relative '../src/associations/book'
+require_relative '../src/associations/rental'
+require_relative '../src/associations/classroom'
+require_relative '../src/entities/student'
+require_relative '../src/entities/person'
+require_relative '../src/entities/teacher'
