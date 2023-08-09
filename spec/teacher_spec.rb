@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Teacher do
   before :each do
-    @teacher = Teacher.new(13, 'Solid State', 'Asghari', parent_permission: false)
+    @teacher = Teacher.new(26, 'Computers', 'John Doe', parent_permission: false)
   end
 
   context 'When testing a Teacher class' do
@@ -11,7 +11,7 @@ describe Teacher do
     end
 
     it 'should return the correct field' do
-    expect(@teacher.specialization).to eql 'Solid State'
+    expect(@teacher.specialization).to eql 'Computers'
     end
   end
 
@@ -24,15 +24,15 @@ describe Teacher do
   context 'Convert Teacher object to JSON' do
     it 'should check json string' do
       json_obj = @teacher.to_json.to_s
-      json_str = '{"json_class":"Teacher","age":13,"specialization":"Solid State","name":"Asghari","parent_permission":false}'
+      json_str = '{"json_class":"Teacher","age":26,"specialization":"Computers","name":"John Doe","parent_permission":false}'
       expect(json_obj).to eq json_str
     end
   end
 
-  context '>Create an object from JSON' do
+  context 'Create an object from JSON' do
     it 'should check json string' do
       @teacher = JSON.parse(
-        '{"json_class":"Teacher","age":13,"specialization":"Solid State","name":"Asghari","parent_permission":false}', create_additions: true)
+        '{"json_class":"Teacher","age":26,"specialization":"Computers","name":"John Doe","parent_permission":false}', create_additions: true)
       expect(@teacher).to be_an_instance_of Teacher
     end
   end
