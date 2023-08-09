@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Student do
   before :each do
-    @student = Student.new(25, 'Bachelors', 'Junaid, parent_permission: true)
+    @student = Student.new(25, 'Bachelors', 'Junaid', parent_permission: true)
     @classroom = Classroom.new('Bachelors')
   end
 
