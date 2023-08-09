@@ -43,7 +43,6 @@ describe Rental do
         }
       JSON
 
-
       # Assert
       expect(json_obj).to eq json_str
     end
@@ -71,10 +70,6 @@ describe Rental do
         }',
         create_additions: true
       )
-
-
-
-      # Act
 
       # Assert
       expect(@rental).to be_an_instance_of Rental
