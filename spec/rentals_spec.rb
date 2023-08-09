@@ -24,8 +24,25 @@ describe Rental do
 
       # Act
       json_obj = @rental.to_json.to_s
-      # rubocop:disable Layout/LineLength
-      json_str = '{"json_class":"Rental","date":"2020/12/12","book":{"json_class":"Book","title":"Title","author":"Author"},"person":{"json_class":"Student","age":"25","classroom":"ruby-101","name":"Mohi","parent_permission":true}}'
+      json_str = <<~JSON
+        {
+          "json_class": "Rental",
+          "date": "2020/12/12",
+          "book": {
+            "json_class": "Book",
+            "title": "Title",
+            "author": "Author"
+          },
+          "person": {
+            "json_class": "Student",
+            "age": "25",
+            "classroom": "ruby-101",
+            "name": "Mohi",
+            "parent_permission": true
+          }
+        }
+      JSON
+
 
       # Assert
       expect(json_obj).to eq json_str
@@ -36,8 +53,26 @@ describe Rental do
     it '>> Check json string' do
       # Arrange
       @rental = JSON.parse(
-        '{"json_class":"Rental","date":"2020/12/12","book":{"json_class":"Book","title":"Title","author":"Author"},"person":{"json_class":"Student","age":"25","classroom":"ruby-101","name":"Mohi","parent_permission":true}}', create_additions: true
+        '{
+          "json_class": "Rental",
+          "date": "2020/12/12",
+          "book": {
+            "json_class": "Book",
+            "title": "Title",
+            "author": "Author"
+          },
+          "person": {
+            "json_class": "Student",
+            "age": "25",
+            "classroom": "ruby-101",
+            "name": "Mohi",
+            "parent_permission": true
+          }
+        }',
+        create_additions: true
       )
+
+
 
       # Act
 
